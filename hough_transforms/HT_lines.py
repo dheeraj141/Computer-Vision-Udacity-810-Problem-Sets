@@ -23,8 +23,7 @@ def threshold_image(img,max_value):
     return img
 
 
-def wait():
-    cv.waitKey(0)
+
 
 #function to display the image
 #input  :     string for the window , image to display
@@ -85,26 +84,27 @@ def detect_line_in_image(hough_space,img,threshold):
 
     image_size_x = img.shape[0]
     image_size_y=img.shape[1]
+
+    #maximum value of D
     maximum_distance = int(np.sqrt(image_size_x*image_size_x + image_size_y*image_size_y))
+
     offset=maximum_distance
-    #extracting the maximum values form the hough space by seeing the
+    # defining the limit above which elements will be considered in the hough space
     limit = (int)(threshold*255)
-    print(limit)
+
     for d in range(hough_space.shape[0]):
         for angle in range(hough_space.shape[1]):
             if(hough_space[d,angle] >limit):
+
                 if (angle ==0):
-                    #print("got zero")
                     y_value = d-offset
                     cv.line(img,(0,y_value), (img.shape[1],y_value),(0,255,0),2)
                     continue
                 elif(angle == 90):
-                    #print("got 90")
                     x_value=d-offset
                     cv.line(img, (x_value,0), (x_value,img.shape[0]),(0,255,0),2)
                     continue
                 else:
-
                     theta = np.deg2rad(angle)
                     r = d-offset
                     for x_value in range(0,img.shape[1],2):
@@ -135,20 +135,24 @@ def hough_transform (dst,img):
     #size_x = dst.shape[0]
     image_size_x = img.shape[1]
     image_size_y = img.shape[0]
+    #theta from 0 to 180 with increment of 1
 
     theta_values = np.deg2rad(np.arange(0,180,1))
     no_of_theta = len(theta_values)
-
+    # precomputation of sin and cos theta values
     sin_theta_values = np.sin(theta_values)
     cos_theta_values = np.cos(theta_values)
+
     maximum_distance = int(np.sqrt(image_size_x*image_size_x + image_size_y*image_size_y))
     offset=maximum_distance
     maximum_bin_size=0
 
     #declaring the hough space based on the minimum and the maximum values
     hough_space = np.zeros((2*maximum_distance,no_of_theta), dtype=np.float32)
+
     for i in range(len(x)):
         for angle in range(no_of_theta):
+            # d = xcos(t)+ ysin(t)
             d = int(y[i]*cos_theta_values[angle] + x[i]*sin_theta_values[angle])
             d= d+offset
             hough_space[d][angle]+=1
