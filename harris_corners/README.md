@@ -18,6 +18,7 @@ python3 harris_corner.py ./check_board.png
 
 <h2> Non Maximum Supression </h2> 
 <div align="center">
+  <img src="./images/simA.png" height="223px">
  
  <img src="./images/harris_simA.png" height="223px">
  
