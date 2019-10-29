@@ -8,4 +8,8 @@ python3 harris_corner.py path_to_the_image
 
 python3 harris_corner.py ./check_board.png
 
-![input](./simA.jpg?raw=true "Optional Title")
+<div align="center">
+ <img src="./check_board.png" height="223px">
+ <img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/inputs/hoovertowernight.jpg" height="223px">
+ <img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/outputs/starry_stanford_bigger.png" width="710px">
+</div>
