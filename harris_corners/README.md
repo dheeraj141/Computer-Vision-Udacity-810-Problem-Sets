@@ -10,8 +10,8 @@ python3 harris_corner.py ./check_board.png
 
 
 <div align="center">
- <h2> Input image</h2>
+ <h2> Input image and output corner image</h2>
  <img src="./check_board.png" height="223px">
- <h2> output image</h2>
+ 
  <img src="./output_harris.png" height="223px">
 </div>
