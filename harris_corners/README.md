@@ -15,3 +15,12 @@ python3 harris_corner.py ./check_board.png
  
  <img src="./output_harris.png" height="223px">
 </div>
+
+<h2> Non Maximum Supression </h2> 
+<div align="center">
+ 
+ <img src="./images/harris_simA.png" height="223px">
+ 
+ <img src="./images/nms_simA.png" height="223px">
+</div>
+
