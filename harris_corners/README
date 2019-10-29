@@ -8,4 +8,4 @@ python3 harris_corner.py path_to_the_image
 
 python3 harris_corner.py ./check_board.png
 
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+![input](./simA.jpg?raw=true "Optional Title")
