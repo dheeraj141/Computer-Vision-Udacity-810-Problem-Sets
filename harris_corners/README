@@ -6,3 +6,10 @@ instruction for running the code
 
 python3 harris_corner.py path_to_the_image
 
+python3 harris_corner.py ./check_board.png
+
+![Input image ](./check_board.png)
+
+![Corner image ](./output_harris.png)
+
+
