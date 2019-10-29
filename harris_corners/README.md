@@ -17,6 +17,8 @@ python3 harris_corner.py ./check_board.png
 </div>
 
 <h2> Non Maximum Supression </h2> 
+<p> first is the input image and then the corners image and after that non maximum suppression is applied which just
+ removes the false positives and increase the efficiency</p>
 <div align="center">
   <img src="./images/simA.jpg" height="223px">
  
