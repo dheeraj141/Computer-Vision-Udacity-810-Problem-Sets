@@ -5,8 +5,20 @@ import sys
 
 
 
+def draw_corners(corner, img):
+    y, x = np.nonzero(corner > 0.4*corner.max())
+    for i in range(len(x)):
+        x1 = int(x[i]); y1 = int(y[i])
+        #color1 = (list(np.random.choice(range(256), size=3)))
+        #color =[int(color1[0]), int(color1[1]), int(color1[2])]
+        cv.circle(img, (x1,y1), 10,[0,0,255],4)
 
-def display_image1( description, img):
+
+    display_image("image 1", img)
+
+
+
+def display_image( description, img):
     cv.imshow(description, img)
     cv.waitKey(0)
 
@@ -52,9 +64,7 @@ def harris_Corners(img, window_size):
             trace = a+b
             R = det - 0.04*(trace**2)
             corners[i,j] = R
-    max = np.amax(corners)
-    img[corners >0.4*corners.max()] = [0,0,255]
-    display_image1("corners in image", img)
+
     return corners
 
 
@@ -74,7 +84,9 @@ def main(argv):
     if img1 is None:
         print("Error opening image\n")
         return -1
-    harris_Corners(img1, 5)
+    corners = harris_Corners(img1, 5)
+    draw_corners(corners, img1)
+
 
 
 
