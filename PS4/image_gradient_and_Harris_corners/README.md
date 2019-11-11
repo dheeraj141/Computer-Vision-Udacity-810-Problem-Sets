@@ -10,19 +10,11 @@ python3 harris_corner.py ./check_board.png
 
 
 <div align="center">
- <h2> Input images</h2>
- <img src="./check_board.png" height="223px">
- 
- <img src="./output_harris.png" height="223px">
+ <h2> Input image</h2>
+ <img src="../simA.jpg" height="223px">
 </div>
 
-<h2> Non Maximum Supression </h2> 
-<p> first is the input image and then the corners image and after that non maximum suppression is applied which just
- removes the false positives and increase the efficiency</p>
+<h2> Image Gradient in X and Y direction Combined </h2> 
 <div align="center">
-  <img src="./images/simA.jpg" height="223px">
- 
- <img src="./images/harris_simA.png" height="223px">
- 
- <img src="./images/nms_simA.png" height="223px">
+  <img src="./images/ps4-1-1_sim.png" height="223px">
 </div>
