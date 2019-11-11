@@ -11,7 +11,7 @@ python3 harris_corner.py ./check_board.png
 
 <div align="center">
  <h2> Input image</h2>
- <img src="../simA.jpg" height="223px">
+ <img src="../input_images/simA.jpg" height="223px">
 </div>
 
 <h2> Image Gradient in X and Y direction Combined </h2> 
