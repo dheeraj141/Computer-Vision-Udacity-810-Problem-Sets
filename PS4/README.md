@@ -1,4 +1,4 @@
-<h2 >PS4 </h2> 
-<h1>Harris corners  </h1>
-<h1>SIFT Descriptors   </h1>
-<h1>Ransac for best Model finding </h1>
+<h3 >PS4 </h3> 
+<h4>Harris corners  </h4>
+<h4>SIFT Descriptors   </h4>
+<h4>Ransac for best Model finding </h4>
