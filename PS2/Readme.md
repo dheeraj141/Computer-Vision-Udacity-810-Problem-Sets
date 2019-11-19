@@ -1,4 +1,4 @@
-<p> <b>Disparity Image using stereo and template matching.</b></p> 
+<p> <b>Disparity Image using stereo and Normalized correlation.</b></p> 
 
 
 
