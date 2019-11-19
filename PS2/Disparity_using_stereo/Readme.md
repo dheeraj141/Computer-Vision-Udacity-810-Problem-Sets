@@ -2,7 +2,7 @@
 
 <p> <b> Instructions to run the code </b> </p>
 
-python3 filename.py left_img right_img 
+python3 filename.py path_to_left_img  path_to_right_img 
 
 
 <h3> Results </h3> 
