@@ -1,4 +1,4 @@
-<p>Disparity image using stereo. When a paif of left and right images are given and then the depth of the object is found using these pair of images </p>
+<p>Disparity image using stereo. When a pair of left and right images are given and then the depth of the object is found using these pair of images </p>
 
 <p> <b> Instructions to run the code </b> </p>
 
