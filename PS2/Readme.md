@@ -9,5 +9,5 @@ That motion is the disparity.</p>
 <p>In a pair of images derived from stereo cameras, you can measure the apparent motion in pixels for every point and make an intensity image out of the measurements. </p>
 
 
-proceed to the specific section for more details.
+<b>Proceed to the specific section for more details.</b>
 
