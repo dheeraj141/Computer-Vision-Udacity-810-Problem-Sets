@@ -55,13 +55,14 @@ def calculate_SSD(left_image, right_image,direction, window_size,max_disparity):
     e1 = cv.getTickCount()
     left = np.asarray(left_image)
     right = np.asarray(right_image)
+    h,w = left_image.shape
 
     window_size_half = int(window_size/2)
-    disparity_left =np.zeros((left_image.shape[0],left_image.shape[1]))
+    disparity_left =np.zeros((h,w))
     #breakpoint()
-    for i in range(window_size_half,left_image.shape[0] - window_size_half):
+    for i in range(window_size_half,h - window_size_half):
         #l = [0]*left_image.shape[1]
-        for j in range(window_size_half,left_image.shape[1] - window_size_half):
+        for j in range(window_size_half,w - window_size_half):
 
 
             min_distance = 65535
@@ -73,10 +74,11 @@ def calculate_SSD(left_image, right_image,direction, window_size,max_disparity):
                 for l in range(-window_size_half, window_size_half):
                     for m in range(-window_size_half, window_size_half):
                         if(direction == 0):
-                             # meaning calculating disparity for left image
-                             temp= int(left[i+l, j+m]) -  int(right[i+l, (j+m)-disparity])
+                            temp= int(left[i+l, j+m]) -  int(right[i+l, (j+m)-disparity])
                         else:
-                            temp= int(right[i+l, j+m]) -  int(left[i+l, (j+m)+disparity])
+                            temp= int(right[i+l, j+m]) -  int(left[i+l, (j+m+disparity)%w])
+
+
                         distance += temp*temp
                 if (distance <min_distance):
                     min_distance=distance
@@ -86,7 +88,7 @@ def calculate_SSD(left_image, right_image,direction, window_size,max_disparity):
 
     e2 = cv.getTickCount()
     print("time taken is ", (e2-e1)/cv.getTickFrequency())
-    ps.display_image("disparity image", disparity_left)
+    #ps.display_image("disparity image", disparity_left)
     #ps.display_image("disparity_right", disparity_right)
     return disparity_left
 
@@ -114,20 +116,29 @@ def main(argv):
         print("Error opening image\n")
         return -1
 
-    ps.display_image("Image", left_image)
+    #ps.display_image("Image", left_image)
     left_gray = cv.cvtColor(left_image,cv.COLOR_BGR2GRAY)
-    ps.display_image("gray image ",left_gray)
+    #ps.display_image("gray image ",left_gray)
     right_gray = cv.cvtColor(right_image, cv.COLOR_BGR2GRAY)
-    ps.display_image("graY image right", right_gray)
+    #ps.display_image("graY image right", right_gray)
     #img = calculate_SSD(left_gray,right_gray,0,5)
     #disparity_left = left_gray.copy()
 
+    for i in range(6,8,2):
+        print("Calculate disparity image for window size {}".format(i))
+        disparity_left = calculate_SSD(left_gray,right_gray,0,i,30)
+        disparity_right = calculate_SSD(left_gray,right_gray,1,i,30)
+        disparity_left = ps.threshold_image(disparity_left,30)
+        disparity_right = ps.threshold_image(disparity_right,30)
+        #ps.display_image("disparity image", disparity_left)
+        file_name_left = "disparity_image_left" + "window_size" + str(i)
+        file_name_right = "disparity_image_right" + "window_size" + str(i)
+
+        ps.save_image(file_name_left, disparity_left)
+        ps.save_image(file_name_right, disparity_right)
 
 
-    disparity_left = calculate_SSD(left_gray,right_gray,1,6,30)
-    disparity_left = ps.threshold_image(disparity_left,30)
-    ps.display_image("disparity image", disparity_left)
-    ps.save_image("disparity_image", disparity_left)
+
 
 
 
