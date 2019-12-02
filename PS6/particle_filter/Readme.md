@@ -5,7 +5,11 @@ Instructions for running the code
 
 C++ code make sure you have opencv installed.
 
-
+<div align="center">
+ <a href="http://www.youtube.com/watch?feature=player_embedded&v=https://www.youtube.com/watch?v=8QSXB8mvO-k
+" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+</div>
 
 
 <div align="center">
@@ -35,3 +39,5 @@ C++ code make sure you have opencv installed.
  <img src="./output/ps62noisy_debate-15.png" height="223px">
   <img src="./output/ps62noisy_debate-50.png" height="223px">
  </div>
+ 
+ 
