@@ -6,7 +6,7 @@ Instructions for running the code
 C++ code make sure you have opencv installed.
 
 <div align="center">
- [![Video For Hand Tracking](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=8QSXB8mvO-k)
+<img src = "https://img.youtube.com/vi/<8QSXB8mvO-k>/hqdefault.jpg">
 </div>
 
 
