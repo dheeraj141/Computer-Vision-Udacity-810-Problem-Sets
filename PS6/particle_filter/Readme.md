@@ -6,6 +6,7 @@ Instructions for running the code
 C++ code make sure you have opencv installed.
 
 <div align="center">
+ <h3> face tracking video link</h3>
  <a href="http://www.youtube.com/watch?feature=player_embedded&v=8QSXB8mvO-k
 " target="_blank"><img src = "https://i.ytimg.com/vi/8QSXB8mvO-k/maxresdefault.jpg"
 alt="Hand Tracking Video" width="240" height="180" border="10" /></a>
