@@ -6,7 +6,7 @@ Instructions for running the code
 C++ code make sure you have opencv installed.
 
 <div align="center">
-<img src = "https://img.youtube.com/vi/<8QSXB8mvO-k>/hqdefault.jpg">
+<img src = "https://i.ytimg.com/vi/8QSXB8mvO-k/maxresdefault.jpg">
 </div>
 
 
