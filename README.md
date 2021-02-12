@@ -7,3 +7,6 @@ Hough transform code to find lines and circles
 
 
 Harris corners code to detect corners ( actual code not opencv library function)
+
+
+Give it a thumbs up if you find it useful.
