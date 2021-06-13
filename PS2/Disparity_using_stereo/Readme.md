@@ -15,8 +15,8 @@ python3 filename.py path_to_left_img  path_to_right_img
 
 <h4> Disparity Image left and Right for Window size 6 </h4> 
 <div align="center">
-  <img src="./results/disparity_image_leftwindow_size16.png" height="223px">
-   <img src="./results/disparity_image_rightwindow_size16.png" height="223px">
+  <img src="./results/disparity_image_leftwindow_size116.png" height="223px">
+   <img src="./results/disparity_image_rightwindow_size116.png" height="223px">
 </div>
 
 <h4> Disparity Image left and Right for Window size 8 </h4> 
